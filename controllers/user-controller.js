@@ -61,7 +61,7 @@ const userController = {
       .catch((err) => res.status(400).json(err));
   },
 
-  // delete User --------- //remove associated thoughts w/ delete user
+  // delete User
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
       .then((dbUserData) => {
