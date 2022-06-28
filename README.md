@@ -34,7 +34,7 @@ Once the project is cloned and the dependencies downloaded, type "npm start" to 
 
 A screenshot of the GET User route on Insomnia is below.
 
-![screenshot of Insomnia](./images/screenshot-insomnia.png)
+![screenshot of Insomnia](./assets/img/insomnia.png)
 
 
 Screenshots of the thought model,   
@@ -60,7 +60,7 @@ The github repository to this project is below:
 
 The site to a video demonstration is below:
 
-[https://drive.google.com/file/d/1S5TEGMSM7Zakefmfl8BiiUQhTZBNFVWC/view](https://drive.google.com/file/d/1S5TEGMSM7Zakefmfl8BiiUQhTZBNFVWC/view)
+[https://drive.google.com/file/d/1nSoboH7JLoGjyah_Badasc1DxopkzY0Q/view](https://drive.google.com/file/d/1nSoboH7JLoGjyah_Badasc1DxopkzY0Q/view)
 
 
 For any additional questions, I can be reached at the following

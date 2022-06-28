@@ -23,7 +23,7 @@ router
   .delete(removeThought);
 
 // /api/thoughts/<thoughtId>
-router.route("/:thoughtId/").put(addReaction);
+router.route("/:thoughtId").put(addReaction);
 
 router.route("/:thoughtId/:reactionId").put(removeReaction);
 
