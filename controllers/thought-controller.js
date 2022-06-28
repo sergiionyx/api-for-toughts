@@ -15,7 +15,7 @@ const ThoughtController = {
 
   // GET thought by id
   getSingleThought({ params }, res) {
-    Thought.findOne({ _id: params.id })
+    Thought.findOne({ _id: params.thoughtId })
       .select("-__v")
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
@@ -32,7 +32,7 @@ const ThoughtController = {
 
   // PUT Thought by id
   editThought({ params, body }, res) {
-    Thought.findOneAndUpdate({ _id: params.id }, body, {
+    Thought.findOneAndUpdate({ _id: params.thoughtId}, body, {
       new: true,
       runValidators: true,
     })
@@ -68,6 +68,7 @@ const ThoughtController = {
 
   // DELETE Thought
   removeThought({ params }, res) {
+      console.log(params)
     Thought.findOneAndDelete({ _id: params.thoughtId })
       .then((deletedThought) => {
         if (!deletedThought) {
@@ -91,8 +92,10 @@ const ThoughtController = {
 
   // PUT Reaction
   addReaction({ params, body }, res) {
+    console.log(params);
+    console.log(body);
     Thought.findOneAndUpdate(
-      { _id: params.id },
+      { _id: params.thoughtId },
       { $push: { reactions: body } },
       { new: true, runValidators: true }
     )
@@ -109,7 +112,7 @@ const ThoughtController = {
   // DELETE reaction
   removeReaction({ params }, res) {
     Thought.findOneAndUpdate(
-      { _id: params.id },
+      { _id: params.thoughtId },
       { $pull: { reactions: { reactionId: params.reactionId } } },
       { new: true }
     )
